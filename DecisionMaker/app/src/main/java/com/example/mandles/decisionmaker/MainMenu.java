@@ -4,11 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.ImageView;
 import android.widget.Button;
 import android.view.View;
-
-import static com.example.mandles.decisionmaker.R.id.activity_rps;
 
 public class MainMenu extends AppCompatActivity {
 

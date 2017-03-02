@@ -11,11 +11,13 @@
     tools:context="com.example.mandles.decisionmaker.CoinToss">
 
     <ImageButton
-        android:id="@+id/img_home"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"/>
+        android:id="@+id/ct_home"
+        android:background="@drawable/home_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
 
     <TextView
         android:id="@+id/ct_msg1"
@@ -26,14 +28,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/ct_title"
-        android:text="Coin Toss!"
-        android:textSize="15pt"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/ct_msg2"
@@ -46,8 +40,8 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:id="@+id/btn_toss"
-        android:text="Roll!"
+        android:id="@+id/ct_toss"
+        android:text="Toss!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
@@ -55,11 +49,21 @@
         android:layout_centerHorizontal="true" />
 
     <ImageView
-        android:id="@+id/img_coin"
+        android:id="@+id/ct_coin"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginBottom="60dp"
-        android:layout_alignBottom="@+id/btn_toss"
+        android:layout_alignBottom="@+id/ct_toss"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/ct_title"
+        android:text="Coin Toss!"
+        android:textSize="15pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ct_home"
+        android:layout_centerHorizontal="true" />
+
 
 </RelativeLayout>
