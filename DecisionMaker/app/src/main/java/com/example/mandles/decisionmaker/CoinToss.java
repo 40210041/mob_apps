@@ -1,8 +1,8 @@
 package com.example.mandles.decisionmaker;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -17,6 +17,7 @@ import java.util.Random;
 
 public class CoinToss extends AppCompatActivity {
 
+    //create vars to be used all over
     public static final Random RANDOM = new Random();
     ImageView ct_coin;
     Button ct_toss;
@@ -26,10 +27,13 @@ public class CoinToss extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coin_toss);
+
+        //set the vars
         ct_coin = (ImageView) findViewById(R.id.ct_coin);
         ct_toss = (Button) findViewById(R.id.ct_toss);
         ct_home = (ImageButton) findViewById(R.id.ct_home);
 
+        //set the click function to flip the coin
         ct_toss.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -39,6 +43,7 @@ public class CoinToss extends AppCompatActivity {
             }
         });
 
+        //set the click function to go to the m.menu
         ct_home.setOnClickListener(new View.OnClickListener()
         {
             @Override

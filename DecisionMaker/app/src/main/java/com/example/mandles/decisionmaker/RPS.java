@@ -21,7 +21,7 @@ public class RPS extends AppCompatActivity {
         //create var for rps_home
         rps_home = (ImageButton) findViewById(R.id.rps_home);
 
-        //set the click function
+        //set the click function to go to the m.menu
         rps_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -32,6 +32,8 @@ public class RPS extends AppCompatActivity {
             }
         });
 
-        //do home butoon thrn commit = "did home buttons"
+
     }
+
+
 }

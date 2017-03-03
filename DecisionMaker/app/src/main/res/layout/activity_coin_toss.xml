@@ -12,21 +12,12 @@
 
     <ImageButton
         android:id="@+id/ct_home"
-        android:background="@drawable/home_icon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:background="@drawable/home_icon2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
-
-    <TextView
-        android:id="@+id/ct_msg1"
-        android:text="Got 2 choices but can't make\n            up your mind?"
-        android:textSize="8pt"
-        android:layout_marginTop="70dp"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
 
     <TextView
@@ -39,15 +30,6 @@
         android:layout_below="@+id/ct_msg1"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:id="@+id/ct_toss"
-        android:text="Toss!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
     <TextView
         android:id="@+id/ct_title"
         android:text="Coin Toss!"
@@ -57,14 +39,33 @@
         android:layout_alignBottom="@+id/ct_home"
         android:layout_centerHorizontal="true" />
 
+    <TextView
+        android:id="@+id/ct_msg1"
+        android:text="Got 2 choices but can't make\n            up your mind?"
+        android:textSize="8pt"
+        android:layout_marginTop="27dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ct_title"
+        android:layout_centerHorizontal="true" />
+
     <ImageView
         android:id="@+id/ct_coin"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginBottom="27dp"
-        android:layout_above="@+id/ct_toss"
+        android:src="@drawable/ct_heads"
+        android:layout_below="@+id/ct_msg2"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/ct_heads"/>
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/ct_toss"
+        android:text="Toss!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ct_coin"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

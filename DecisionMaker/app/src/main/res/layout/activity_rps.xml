@@ -12,9 +12,9 @@
 
     <ImageButton
         android:id="@+id/rps_home"
-        android:background="@drawable/home_icon"
-        android:layout_width="50dp"
-        android:layout_height="50dp" />
+        android:background="@drawable/home_icon2"
+        android:layout_width="35dp"
+        android:layout_height="35dp" />
 
     <TextView
         android:id="@+id/rps_title"

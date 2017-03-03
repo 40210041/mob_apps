@@ -48,9 +48,9 @@
 
     <ImageButton
         android:id="@+id/dr_home"
-        android:background="@drawable/home_icon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:background="@drawable/home_icon2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
