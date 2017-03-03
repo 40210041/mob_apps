@@ -48,14 +48,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
-    <ImageView
-        android:id="@+id/ct_coin"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginBottom="60dp"
-        android:layout_alignBottom="@+id/ct_toss"
-        android:layout_centerHorizontal="true" />
-
     <TextView
         android:id="@+id/ct_title"
         android:text="Coin Toss!"
@@ -64,6 +56,15 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/ct_home"
         android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/ct_coin"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="27dp"
+        android:layout_above="@+id/ct_toss"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ct_heads"/>
 
 
 </RelativeLayout>

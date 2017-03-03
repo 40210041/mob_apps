@@ -2,16 +2,14 @@ package com.example.mandles.decisionmaker;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
-import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;//allows handler to be used
 import android.os.Handler.Callback;
 import android.os.Message;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Random;
 import java.util.Timer;
@@ -41,12 +39,11 @@ public class DiceRoll extends AppCompatActivity
         handler = new Handler(callback);
         dr_home = (ImageButton) findViewById(R.id.dr_home);
 
-
         dr_home.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
+            public void onClick(View dr_v)
             {
-                Intent activity_dice_roll = new Intent(DiceRoll.this, RPS.class);
+                Intent activity_dice_roll = new Intent(DiceRoll.this, MainMenu.class);
                 startActivity(activity_dice_roll);
             }
         });
