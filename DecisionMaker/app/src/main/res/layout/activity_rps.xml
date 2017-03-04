@@ -31,18 +31,48 @@
         android:layout_height="95dp"
         android:src="@drawable/quest_mark"
         android:layout_alignTop="@+id/rps_user"
-        android:layout_alignRight="@+id/rps_title"
-        android:layout_alignEnd="@+id/rps_title" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <ImageView
         android:id="@+id/rps_user"
         android:layout_width="95dp"
         android:layout_height="95dp"
         android:src="@drawable/quest_mark"
-        android:layout_below="@+id/rps_home"
-        android:layout_alignLeft="@+id/rps_title"
-        android:layout_alignStart="@+id/rps_title"
-        android:layout_marginTop="116dp" />
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:id="@+id/rps_vs"
+        android:text="VS"
+        android:textSize="15pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"/>
+
+    <TextView
+        android:id="@+id/rps_u"
+        android:text="YOU"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="230dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/rps_c"
+        android:text="CPU"
+        android:layout_marginTop="230dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rps_scissors"
+        android:layout_alignStart="@+id/rps_scissors" />
+
+    <TextView
+        android:id="@+id/rps_result"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="290dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <ImageButton
         android:id="@+id/rps_rock"
@@ -50,8 +80,8 @@
         android:layout_height="50dp"
         android:background="@drawable/rock"
         android:layout_alignTop="@+id/rps_paper"
-        android:layout_alignLeft="@+id/rps_user"
-        android:layout_alignStart="@+id/rps_user" />
+        android:layout_alignLeft="@+id/rps_title"
+        android:layout_alignStart="@+id/rps_title" />
 
     <ImageButton
         android:id="@+id/rps_paper"
@@ -67,7 +97,7 @@
         android:layout_height="50dp"
         android:background="@drawable/scissors"
         android:layout_alignTop="@+id/rps_paper"
-        android:layout_alignRight="@+id/rps_cpu"
-        android:layout_alignEnd="@+id/rps_cpu" />
+        android:layout_alignRight="@+id/rps_title"
+        android:layout_alignEnd="@+id/rps_title" />
 
 </RelativeLayout>
