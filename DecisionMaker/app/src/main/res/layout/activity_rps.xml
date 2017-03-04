@@ -18,12 +18,56 @@
 
     <TextView
         android:id="@+id/rps_title"
-        android:textSize="15pt"
-        android:text="Rock Paper \n  Scissors"
+        android:textSize="13pt"
+        android:text="    Rock Paper Scissors"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
+    <ImageView
+        android:id="@+id/rps_cpu"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:src="@drawable/quest_mark"
+        android:layout_alignTop="@+id/rps_user"
+        android:layout_alignRight="@+id/rps_title"
+        android:layout_alignEnd="@+id/rps_title" />
+
+    <ImageView
+        android:id="@+id/rps_user"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:src="@drawable/quest_mark"
+        android:layout_below="@+id/rps_home"
+        android:layout_alignLeft="@+id/rps_title"
+        android:layout_alignStart="@+id/rps_title"
+        android:layout_marginTop="116dp" />
+
+    <ImageButton
+        android:id="@+id/rps_rock"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rock"
+        android:layout_alignTop="@+id/rps_paper"
+        android:layout_alignLeft="@+id/rps_user"
+        android:layout_alignStart="@+id/rps_user" />
+
+    <ImageButton
+        android:id="@+id/rps_paper"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/paper"
+        android:layout_marginTop="350dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageButton
+        android:id="@+id/rps_scissors"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/scissors"
+        android:layout_alignTop="@+id/rps_paper"
+        android:layout_alignRight="@+id/rps_cpu"
+        android:layout_alignEnd="@+id/rps_cpu" />
 
 </RelativeLayout>

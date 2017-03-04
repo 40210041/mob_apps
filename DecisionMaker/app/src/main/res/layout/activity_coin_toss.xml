@@ -19,21 +19,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
-
-    <TextView
-        android:id="@+id/ct_msg2"
-        android:text="Press the button and let \nthe coin decide for you!"
-        android:textSize="8pt"
-        android:layout_marginTop="13dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ct_msg1"
-        android:layout_centerHorizontal="true" />
-
     <TextView
         android:id="@+id/ct_title"
         android:text="Coin Toss!"
-        android:textSize="15pt"
+        android:textSize="13pt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/ct_home"
@@ -42,17 +31,27 @@
     <TextView
         android:id="@+id/ct_msg1"
         android:text="Got 2 choices but can't make\n            up your mind?"
-        android:textSize="8pt"
+        android:textSize="7pt"
         android:layout_marginTop="27dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ct_title"
         android:layout_centerHorizontal="true" />
 
+    <TextView
+        android:id="@+id/ct_msg2"
+        android:text="Press the button and let \nthe coin decide for you!"
+        android:textSize="7pt"
+        android:layout_marginTop="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ct_msg1"
+        android:layout_centerHorizontal="true" />
+
     <ImageView
         android:id="@+id/ct_coin"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:src="@drawable/ct_heads"
         android:layout_below="@+id/ct_msg2"
         android:layout_centerHorizontal="true"
@@ -66,6 +65,16 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/ct_coin"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/ct_result"
+        android:text="placemat"
+        android:textSize="7pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ct_toss"
+        android:layout_marginTop="20dp"/>
 
 
 </RelativeLayout>
