@@ -22,9 +22,10 @@ public class DiceRoll extends AppCompatActivity
     // create vars to be used all over
     boolean rolling = false;
     ImageButton dr_home;
-    ImageView dice_pic;//refs the images
-    Random rng = new Random(); //rng generator
-    Handler handler; //message to roll dice
+    ImageView dice_pic;
+    Random rng = new Random();
+    //message to roll dice
+    Handler handler;
     TextView roll_result;
     TextView ans_result;
     Timer timer = new Timer();
@@ -59,15 +60,17 @@ public class DiceRoll extends AppCompatActivity
 
     public void HandleClick(View arg0)
     {
-        // if the dice is not rolling
+        //if the dice is not rolling
         if (!rolling)
         {
             //set it to true
             rolling = true;
-            //show rolling image
+
+            //show "rolling" image
             dice_pic.setImageResource(R.drawable.dice3droll);
+
             //set a delay to show the image
-            timer.schedule(new Roll(), 400);
+            timer.schedule(new Roll(), 250);
         }
     }
 

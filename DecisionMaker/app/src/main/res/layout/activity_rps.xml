@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/BG"
     tools:context="com.example.mandles.decisionmaker.RPS">
 
     <ImageButton
@@ -18,11 +19,22 @@
 
     <TextView
         android:id="@+id/rps_title"
-        android:textSize="13pt"
-        android:text="    Rock Paper Scissors"
+        android:textSize="12pt"
+        android:text=" Rock Paper Scissors "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/rps"
         android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/rps_scissors"
+        android:layout_alignEnd="@+id/rps_scissors" />
+
+    <TextView
+        android:id="@+id/rps_msg"
+        android:text="Go against the CPU to help\n      make that decision!"
+        android:textSize="7pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
         android:layout_centerHorizontal="true" />
 
     <ImageView
@@ -39,7 +51,7 @@
         android:layout_width="95dp"
         android:layout_height="95dp"
         android:src="@drawable/quest_mark"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="140dp"/>
 
     <TextView
         android:id="@+id/rps_vs"
@@ -48,20 +60,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"/>
+        android:layout_marginTop="200dp"/>
 
     <TextView
         android:id="@+id/rps_u"
         android:text="YOU"
         android:layout_marginLeft="35dp"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="250dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/rps_c"
         android:text="CPU"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="250dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/rps_scissors"
@@ -69,6 +81,8 @@
 
     <TextView
         android:id="@+id/rps_result"
+        android:text="Pick a button!"
+        android:textSize="9pt"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="290dp"
         android:layout_width="wrap_content"
@@ -80,8 +94,8 @@
         android:layout_height="50dp"
         android:background="@drawable/rock"
         android:layout_alignTop="@+id/rps_paper"
-        android:layout_alignLeft="@+id/rps_title"
-        android:layout_alignStart="@+id/rps_title" />
+        android:layout_toLeftOf="@+id/rps_msg"
+        android:layout_toStartOf="@+id/rps_msg" />
 
     <ImageButton
         android:id="@+id/rps_paper"
@@ -97,7 +111,7 @@
         android:layout_height="50dp"
         android:background="@drawable/scissors"
         android:layout_alignTop="@+id/rps_paper"
-        android:layout_alignRight="@+id/rps_title"
-        android:layout_alignEnd="@+id/rps_title" />
+        android:layout_toRightOf="@+id/rps_msg"
+        android:layout_toEndOf="@+id/rps_msg" />
 
 </RelativeLayout>

@@ -53,7 +53,6 @@ public class RPS extends AppCompatActivity implements OnClickListener {
         rps_paper.setOnClickListener(this);
         rps_scissors.setOnClickListener(this);
 
-
         //create var for rps_home
         rps_home = (ImageButton) findViewById(R.id.rps_home);
 
@@ -72,45 +71,47 @@ public class RPS extends AppCompatActivity implements OnClickListener {
     @Override
     public void onClick(View v)
     {
+        //set the users image to what they pick
         rps_user = (ImageView) findViewById(R.id.rps_user);
-        boolean play = true;
 
         switch (v.getId())
         {
+            //if the user chooses rock
             case R.id.rps_rock:
                 uselect = Option.Rock;
                 rps_user.setImageResource(R.drawable.rock);
                 break;
 
+            //if the user chooses paper
             case R.id.rps_paper:
                 uselect = Option.Paper;
                 rps_user.setImageResource(R.drawable.paper);
                 break;
 
+            //if the user chooses scissors
             case R.id.rps_scissors:
                 uselect = Option.Scissors;
                 rps_user.setImageResource(R.drawable.scissors);
                 break;
         }
-
-        if (play) {
+            //ref play()
             play();
+            //ref showResults()
             showResults();
-        }
      }
 
 
     //set the rng
     private void play()
     {
+        //set rng, 1/3 chance of either rock, paper, or scissors
         int random = ((int)(Math.random()*10)) %3;
-        cpu_select = null;
+        //set the cpus image to what the rng decides
         rps_cpu = (ImageView) findViewById(R.id.rps_cpu);
 
         // set the rng
         switch (random)
         {
-
             //if the rng chooses rock
             case 0:
                 cpu_select = Option.Rock;
@@ -136,7 +137,7 @@ public class RPS extends AppCompatActivity implements OnClickListener {
         {
             result = result.draw;
         }
-        //if the user looses
+        //if the user loses
         else if (cpu_select == Option.Rock && uselect == Option.Scissors)
         {
             result = result.loss;
@@ -156,19 +157,9 @@ public class RPS extends AppCompatActivity implements OnClickListener {
         }
     }
 
-    // Chunk to show the result message
+    //show the result message
     private void showResults()
     {
-        AlertDialog.Builder builder = new AlertDialog.Builder(RPS.this);
-        builder.setCancelable(false);
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener()
-        {
-            @Override
-            public void onClick(DialogInterface dialog, int which)
-            {
-                //do nothing
-            }
-        });
         rps_result = (TextView) findViewById(R.id.rps_result);
 
         //show the message in accordance to the result
@@ -189,177 +180,3 @@ public class RPS extends AppCompatActivity implements OnClickListener {
         }
     }
 }
-
-/*
-/*
-
-    Used apieceofmycode.blogspt.co.uk as a guide
-    changed a lot of things and has no images
-    doesnt have half the things he does
-
-
-
-package com.example.mandles.rpstut;
-
-// Import the libraries required
-        import android.graphics.Path;
-        import android.support.v7.app.AppCompatActivity;
-        import android.os.Bundle;
-        import android.app.Activity;
-        import android.app.AlertDialog;
-        import android.content.DialogInterface;
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.view.Menu;
-        import android.view.View;
-        import android.view.View.OnClickListener;
-        import android.widget.Button;
-        import android.widget.ImageButton;
-        import android.widget.ImageView;
-        import android.widget.TextView;
-
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
-    public enum Option
-    {
-        ROCK, PAPER, SCISSORS
-    }
-
-    public enum Result
-    {
-        WIN, LOSS, DRAW
-    }
-
-    private Option userSelect;
-    private Result gameResult;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        Button btn_Rock = (Button) findViewById(R.id.btn_Rock);
-        Button btn_Paper = (Button) findViewById(R.id.btn_Paper);
-        Button btn_Scissors = (Button) findViewById(R.id.btn_Scissors);
-
-        // set click listening event for buttons
-        btn_Rock.setOnClickListener(this);
-        btn_Paper.setOnClickListener(this);
-        btn_Scissors.setOnClickListener(this);
-
-    // set the onclicklistener
-    @Override
-    public void onClick(View v) {
-        TextView txtv = (TextView) findViewById(R.id.txt_uchoice);
-        boolean play = true;
-
-        switch (v.getId())
-        {
-            case R.id.btn_Rock:
-                userSelect = Option.ROCK;
-                txtv.setText("Rock");
-                break;
-
-            case R.id.btn_Paper:
-                userSelect = Option.PAPER;
-                txtv.setText("Paper");
-                break;
-
-            case R.id.btn_Scissors:
-                userSelect = Option.SCISSORS;
-                txtv.setText("Scissors");
-                break;
-        }
-
-        if (play) {
-            play();
-            showResults();
-        }
-    }
-    // chunk to determine the rng
-    private void play()
-    {
-        int random = ((int)(Math.random()*10)) %3;
-        Option androidSelect = null;
-        TextView txt_and = (TextView) findViewById(R.id.txt_rngchoice);
-
-        // set the rng
-        switch (random)
-        {
-            case 0:
-                androidSelect = Option.ROCK;
-                txt_and.setText("Rock");
-                break;
-
-            case 1:
-                androidSelect = Option.PAPER;
-                txt_and.setText("Paper");
-                break;
-
-            case 2:
-                androidSelect = Option.SCISSORS;
-                txt_and.setText("Scissors");
-                break;
-        }
-
-        if(androidSelect == userSelect)
-        {
-            gameResult = gameResult.DRAW;
-        }
-        else if (androidSelect == Option.ROCK && userSelect == Option.SCISSORS)
-        {
-            gameResult = gameResult.LOSS;
-        }
-        else if (androidSelect == Option.PAPER && userSelect == Option.ROCK)
-        {
-            gameResult = gameResult.LOSS;
-        }
-        else if (androidSelect == Option.SCISSORS && userSelect == Option.PAPER)
-        {
-            gameResult = gameResult.LOSS;
-        }
-        else
-        {
-            gameResult = gameResult.WIN;
-        }
-    }
-
-
-
-    // Chunk to show the result message
-    private void showResults()
-    {
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-        builder.setCancelable(false);
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener()
-        {
-            @Override
-            public void onClick(DialogInterface dialog, int which)
-            {
-                //do nothing
-            }
-        });
-
-        //set the message to accomodate the result
-        if (gameResult == gameResult.LOSS)
-        {
-            builder.setMessage("You Lose!");
-        }
-        else if (gameResult == gameResult.WIN)
-        {
-            builder.setMessage("You win!");
-        }
-        else if (gameResult == gameResult.DRAW)
-        {
-            builder.setMessage("Its a draw!");
-        }
-
-        AlertDialog alert = builder.create();
-        alert.show();
-    }
-
-
-}
-
-
- */

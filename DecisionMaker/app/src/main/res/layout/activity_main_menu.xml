@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/BG"
     tools:context="com.example.mandles.decisionmaker.MainMenu">
 
     <TextView
@@ -20,32 +21,34 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="43dp" />
 
-
-    <Button
-        android:id="@+id/btn_rps"
-        android:text="Rock Paper Scissors"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
-        android:layout_below="@+id/title"
-        android:layout_centerHorizontal="true" />
-
     <Button
         android:id="@+id/btn_coin_toss"
         android:text="Coin Toss"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="39dp"
-        android:layout_below="@+id/btn_rps"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="55dp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:background="@color/ct"/>
 
     <Button
         android:id="@+id/btn_dice_roll"
         android:text="Dice Roll"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="39dp"
         android:layout_below="@+id/btn_coin_toss"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="@color/dr"/>
+
+    <Button
+        android:id="@+id/btn_rps"
+        android:text="Rock Paper Scissors"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/btn_dice_roll"
+        android:layout_centerHorizontal="true"
+        android:background="@color/rps"/>
 
 </RelativeLayout>

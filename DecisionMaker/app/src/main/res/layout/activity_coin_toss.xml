@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/BG"
     tools:context="com.example.mandles.decisionmaker.CoinToss">
 
     <ImageButton
@@ -21,12 +22,13 @@
 
     <TextView
         android:id="@+id/ct_title"
-        android:text="Coin Toss!"
+        android:text="  Coin Toss!  "
         android:textSize="13pt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/ct_home"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="@color/ct"/>
 
     <TextView
         android:id="@+id/ct_msg1"
@@ -55,8 +57,8 @@
         android:src="@drawable/ct_heads"
         android:layout_below="@+id/ct_msg2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"/>
 
     <Button
         android:id="@+id/ct_toss"
@@ -64,17 +66,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ct_coin"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:id="@+id/ct_result"
-        android:text="placemat"
-        android:textSize="7pt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/ct_toss"
-        android:layout_marginTop="20dp"/>
-
+        android:layout_marginTop="18dp"
+        android:background="@color/ct"/>
 
 </RelativeLayout>

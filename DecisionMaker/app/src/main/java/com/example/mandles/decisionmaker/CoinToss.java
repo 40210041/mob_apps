@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import java.util.Random;
 
@@ -19,11 +18,10 @@ import java.util.Random;
 public class CoinToss extends AppCompatActivity {
 
     //create vars to be used all over
-    public static final Random RANDOM = new Random();
-    ImageView ct_coin;
     Button ct_toss;
+    ImageView ct_coin;
     ImageButton ct_home;
-    TextView ct_result;
+    public static final Random rng = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +31,6 @@ public class CoinToss extends AppCompatActivity {
         //set the vars
         ct_coin = (ImageView) findViewById(R.id.ct_coin);
         ct_toss = (Button) findViewById(R.id.ct_toss);
-        ct_result = (TextView) findViewById(R.id.ct_result);
         ct_home = (ImageButton) findViewById(R.id.ct_home);
 
         //set the click function to flip the coin
@@ -53,6 +50,7 @@ public class CoinToss extends AppCompatActivity {
             @Override
             public void onClick(View ct_v)
             {
+                //from rps, bring user back to m.menu
                 Intent activity_coin_toss = new Intent(CoinToss.this, MainMenu.class);
                 startActivity(activity_coin_toss);
             }
@@ -64,10 +62,11 @@ public class CoinToss extends AppCompatActivity {
     {
         //fadeout animation
         Animation fadeOut = new AlphaAnimation(1,0);
+
         fadeOut.setInterpolator((new AccelerateInterpolator()));
 
         //fadeout speed
-        fadeOut.setDuration(1000);
+        fadeOut.setDuration(800);
         fadeOut.setFillAfter(true);
         fadeOut.setAnimationListener(new Animation.AnimationListener()
         {
@@ -81,7 +80,7 @@ public class CoinToss extends AppCompatActivity {
             public void onAnimationEnd(Animation animation)
             {
                 //set ratio of heads to tails to 50:50
-                ct_coin.setImageResource(RANDOM.nextFloat() > 0.5f ? R.drawable.ct_tails : R.drawable.ct_heads);
+                ct_coin.setImageResource(rng.nextFloat() > 0.5f ? R.drawable.ct_tails : R.drawable.ct_heads);
 
                 //fadein animation
                 Animation fadeIn = new AlphaAnimation(0,1);
