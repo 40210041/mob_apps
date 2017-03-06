@@ -73,16 +73,17 @@
     <TextView
         android:id="@+id/dr_result1"
         android:textSize="7pt"
+        android:text="You rolled:"
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/dr_roll"
-        android:layout_alignLeft="@+id/dr_result2"
-        android:layout_alignStart="@+id/dr_result2" />
+        android:layout_centerHorizontal="true"/>
 
     <TextView
         android:id="@+id/dr_result2"
         android:textSize="7pt"
+        android:text="Result:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/dr_result1"
